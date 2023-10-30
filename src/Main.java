@@ -33,46 +33,39 @@ public class Main { //извините пожалуйста, спешила и �
     public static void task2() {
         int[] arr = generateRandomArray();
 
-        int minArr = 200_000;
-        for (final int current : arr) {
-            if (current < minArr) {
-                minArr = current;
+        int minArr = arr[0];
+        int maxArr = arr[0];
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] < minArr) {
+                minArr = arr[i];
+            }
+            if (arr[i] > maxArr) {
+                maxArr = arr[i];
             }
         }
         System.out.println("Минимальная сумма трат за день составила " + minArr + " рублей");
-
-        System.out.println();
-
-        int maxArr = 100_000;
-        for (int i = 0; i < arr.length; i++) {
-            final int current = arr[i];
-            if (current > maxArr) {
-                maxArr = current;
-            }
-        }
         System.out.println("Максимальная сумма трат за день составила " + maxArr + " рублей"); //задача2
-
         System.out.println();
     }
 
-
-    public static void task3() {
-        int[] arr = generateRandomArray();
-        int sum = 0;
-        for (int index = 0; index < arr.length; index++) {
-            sum += arr[index];
+    public static void task3(){
+        int[]arr=generateRandomArray();
+        int sum=0;
+        for(int index=0;index<arr.length;index++){
+        sum+=arr[index];
         }
-        double average = 0;
-        average = (double) sum / arr.length;
-        System.out.println("Средняя сумма трат за месяц составила " + average + " рублей"); //задача3
+        double average=0;
+        average=(double)sum/arr.length;
+        System.out.println("Средняя сумма трат за месяц составила "+average+" рублей"); //задача3
         System.out.println();
 
-    }
 
-    public static void task4() {
-        char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
-        for (int i = reverseFullName.length - 1; i >= 0; i--) {
-            System.out.print(reverseFullName[i]);       //задача4
         }
-    }
-}
+
+public static void task4(){
+        char[]reverseFullName={'n','a','v','I',' ','v','o','n','a','v','I'};
+        for(int i=reverseFullName.length-1;i>=0;i--){
+        System.out.print(reverseFullName[i]);       //задача4
+        }
+        }
+        }
